@@ -30,6 +30,8 @@ gem 'turbolinks', '~> 5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Devise
+gem 'devise'
 
 
 group :development, :test do
