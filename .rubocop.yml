@@ -1,0 +1,52 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - spec/rails_helper.rb
+    - config/**/*
+    - docs/**/*
+
+  TargetRubyVersion: 2.3
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 99
+
+HasAndBelongsToMany:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+BlockLength:
+  Enabled: false
+
+# rubocop-rspec custom configurations
+
+require: rubocop-rspec
+
+Style/VariableNumber:
+  EnforcedStyle: snake_case
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 5
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
