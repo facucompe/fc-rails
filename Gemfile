@@ -44,6 +44,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Rspec
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :development do
@@ -56,6 +58,13 @@ group :development do
   # Add rubocop lint
   gem 'rubocop', '~> 0.49.1'
   gem 'rubocop-rspec', '1.15.0'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'faker', '~> 1.4', '>= 1.4.3'
+  gem 'factory_girl'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
