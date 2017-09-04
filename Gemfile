@@ -35,7 +35,7 @@ gem 'devise'
 
 gem 'versionist'
 
-gem 'jwt'
+gem 'jwt', '~> 2.0'
 
 
 group :development, :test do
