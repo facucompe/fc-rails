@@ -11,7 +11,7 @@ class AuthenticationTokenManager
         token,
         Rails.application.secrets.secret_key_base,
         true,
-        authentication: 'HS256'
+        algorithm: 'HS256'
       )[0]
       AuthenticationDecodedToken.new(payload)
     rescue
