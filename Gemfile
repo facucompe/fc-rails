@@ -46,6 +46,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Rspec
   gem 'rspec-rails', '~> 3.6'
+  gem 'active_model_serializers', '~> 0.10.0'
 end
 
 group :development do
