@@ -47,6 +47,7 @@ group :development, :test do
   # Rspec
   gem 'rspec-rails', '~> 3.6'
   gem 'active_model_serializers', '~> 0.10'
+  gem 'dotenv-rails'
 end
 
 group :development do

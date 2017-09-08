@@ -6,9 +6,10 @@ module Api
       def create
         rent = Rent.new(rent_params)
         if rent.save
+          byebug
+          RentMailer.rent_notification(rent).deliver_later  
           render json: rent, status: :created
         else
-          byebug
           render json: { errors: rent.errors }, status: :bad_request
         end
       end
