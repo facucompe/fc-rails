@@ -57,10 +57,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 587,
-    :domain => "training.wolox.com.ar",
-    :user_name => "no-reply@training.wolox.com.ar",
-    :password => "rTAtdESqq48Q6hNFhuWbdXCf"
+    :address => Rails.application.secrets.mailer_address,
+    :port => Rails.application.secrets.mailer_port,
+    :domain => Rails.application.secrets.mailer_domain,
+    :user_name => Rails.application.secrets.mailer_user_name,
+    :password => Rails.application.secrets.mailer_password
   }
 end
