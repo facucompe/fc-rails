@@ -1,6 +1,8 @@
 module Api
   module V1
     class SessionsController < ApiController
+      # skip_
+
       def create
         if authenticated_user?
           token_data = AuthenticableEntity.generate_access_token(user)
