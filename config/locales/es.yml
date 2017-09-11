@@ -1,0 +1,9 @@
+es:
+  mailer:
+    mailTitle: 'Nuevo prestamo'
+    title: 'Titulo:'
+    author: 'Autor:'
+    publisher: 'Editorial:'
+    year: 'Año:'
+    from: 'Desde:'
+    to: 'Hasta:'
