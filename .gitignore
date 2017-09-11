@@ -27,4 +27,8 @@
 !.vscode/extensions.json
 .history
 
+<<<<<<< ef2dc588b5f29483fc00e97a33fa36bf35accfda
 .env
+=======
+.env
+>>>>>>> Added .env to gitignore
