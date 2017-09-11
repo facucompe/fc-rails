@@ -37,6 +37,7 @@ gem 'versionist'
 
 gem 'jwt', '~> 2.0'
 
+gem 'active_model_serializers', '~> 0.10'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,7 +47,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Rspec
   gem 'rspec-rails', '~> 3.6'
-  gem 'active_model_serializers', '~> 0.10'
   gem 'dotenv-rails'
 end
 
