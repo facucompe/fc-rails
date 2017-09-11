@@ -49,6 +49,7 @@ group :development, :test do
   # Rspec
   gem 'rspec-rails', '~> 3.6'
   gem 'dotenv-rails'
+  gem 'activeadmin', github: 'activeadmin'
 end
 
 group :development do
