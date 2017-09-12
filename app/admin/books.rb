@@ -1,5 +1,5 @@
 ActiveAdmin.register Book do
-permit_params :author, :genre, :image, :title, :publisher, :year
+  permit_params :author, :genre, :image, :title, :publisher, :year
 
   index do
     selectable_column
@@ -19,5 +19,4 @@ permit_params :author, :genre, :image, :title, :publisher, :year
   filter :title
   filter :publisher
   filter :year
-
 end
