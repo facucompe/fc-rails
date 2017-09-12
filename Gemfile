@@ -49,7 +49,6 @@ group :development, :test do
   # Rspec
   gem 'rspec-rails', '~> 3.6'
   gem 'dotenv-rails'
-  gem 'activeadmin', github: 'activeadmin'
 end
 
 group :development do
@@ -62,6 +61,7 @@ group :development do
   # Add rubocop lint
   gem 'rubocop', '~> 0.49.1'
   gem 'rubocop-rspec', '1.15.0'
+  gem 'activeadmin'
 end
 
 group :test do
