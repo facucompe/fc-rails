@@ -12,6 +12,7 @@ module Api
       end
 
       def suggestion_params
+        byebug
         params.require(:book_suggestion).permit(:editorial, :title, :author, :link, :price)
       end
     end
