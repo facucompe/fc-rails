@@ -3,7 +3,7 @@ class BookSuggestions < ActiveRecord::Migration[5.1]
     create_table :book_suggestions do |t|
       t.string :editorial,                        null: false, default: ""
       t.float :price,                             null: false, default: 0
-      t.string :title                             nell: false, default: ""
+      t.string :title                             null: false, default: ""
       t.string :author,                           null: false, default: ""
       t.string :link,                             null: false, default: ""
       t.string :publisher
