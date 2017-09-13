@@ -8,7 +8,7 @@ module Api
           RentMailer.rent_notification(rent).deliver_later
           render json: rent, status: :created
         else
-          render json: { errors: rent.errors }, status: :bad_request
+          render json: { errors: rent.errors }, status: :forbidden
         end
       end
 
