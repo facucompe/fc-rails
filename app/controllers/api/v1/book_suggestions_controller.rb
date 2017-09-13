@@ -9,7 +9,8 @@ module Api
         else
           render json: { errors: book_suggestion.errors }, status: :bad_request
         end
-        end
+      end
+
       def suggestion_params
         params.require(:book_suggestion).permit(:editorial, :title, :author, :link, :price)
       end
