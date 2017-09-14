@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :email, presence: true
 
   has_many :rents
+  has_many :book_suggestions
 
   def generate_verification_code
     self.verification_code = AuthenticableEntity.verification_code

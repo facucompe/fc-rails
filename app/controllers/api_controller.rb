@@ -3,6 +3,7 @@ class ApiController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_nothing_bad_req
   protect_from_forgery with: :null_session
   before_action :current_user, :authenticate_request
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
 
@@ -47,5 +48,9 @@ class ApiController < ApplicationController
 
   def render_nothing_bad_req
     head :bad_request
+  end
+
+  def user_not_authorized
+    render json: { error: 'User not authorized' }, status: :forbidden
   end
 end

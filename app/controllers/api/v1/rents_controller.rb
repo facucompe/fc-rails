@@ -3,6 +3,7 @@ module Api
     class RentsController < ApiController
       def create
         rent = Rent.new(rent_params)
+        authorize rent
         if rent.save
           RentMailer.rent_notification(rent).deliver_later
           render json: rent, status: :created
@@ -12,7 +13,9 @@ module Api
       end
 
       def index
-        render json: Rent.where(user_id: params[:user_id]), status: :ok
+        rents = Rent.where(user_id: params[:user_id])
+        authorize rents
+        render json: rents, status: :ok
       end
 
       private
