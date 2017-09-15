@@ -11,6 +11,8 @@ module Api
         end
       end
 
+      private
+
       def suggestion_params
         params.require(:book_suggestion).permit(:editorial, :title, :author, :link, :price)
       end

@@ -1,0 +1,26 @@
+<h2>New book suggestion</h2>
+
+<%= simple_form_for @new_book_suggestion, url:'api/v1/book_suggestions' do |f|%>
+  <%=f.input :title %>
+  <%=f.input :editorial %>
+  <%=f.button :submit %>
+<%end%>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Editorial</th>
+    <th>Price</th>
+    <th>Link</th>
+  </tr>
+  <% @book_suggestions.each do |book_suggestion| %>
+    <tr>
+      <td><%=book_suggestion.title%></td>
+      <td><%=book_suggestion.author%></td>
+      <td><%=book_suggestion.editorial%></td>
+      <td><%=book_suggestion.price%></td>
+      <td><%=book_suggestion.link%></td>
+    </tr>
+  <%end%>
+</table>
