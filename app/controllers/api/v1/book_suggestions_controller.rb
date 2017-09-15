@@ -4,7 +4,6 @@ module Api
       skip_before_action :current_user, :authenticate_request, only: [:create]
       def create
         book_suggestion = BookSuggestion.new(suggestion_params)
-        # book_suggestion.user_id = current_user.id
         if book_suggestion.save
           render json: book_suggestion, status: :created
         else
