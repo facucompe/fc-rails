@@ -16,7 +16,7 @@ describe Api::V1::BookSuggestionsController, type: :controller do
       it 'responds with 201 status' do
         post :create, params: { book_suggestion: new_book_suggestion }
         expect(response).to have_http_status(:created)
-        expect(JSON.parse(response.body)['user_id']).to eq user.id
+        expect(response_body['user']['id']).to eq user.id
       end
     end
 
