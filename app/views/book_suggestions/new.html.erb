@@ -1,12 +1,16 @@
 <h2>New book suggestion</h2>
 
-<%= simple_form_for @new_book_suggestion, url:'api/v1/book_suggestions' do |f|%>
+<%= simple_form_for @new_book_suggestion, :url => url_for(:action=>'create', :controller=>'/api/v1/book_suggestions'), :method=>'post', :remote=>true do |f|%>
   <%=f.input :title %>
   <%=f.input :editorial %>
+  <%=f.input :author%>
+  <%=f.input :price%>
+  <%=f.input :link%>
+  <%=f.input :year%>
   <%=f.button :submit %>
 <%end%>
 
-<table>
+<table id="suggestion_table">
   <tr>
     <th>Title</th>
     <th>Author</th>
