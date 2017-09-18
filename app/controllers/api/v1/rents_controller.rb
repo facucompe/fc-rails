@@ -13,7 +13,9 @@ module Api
       end
 
       def index
-        rents = Rent.where(user_id: params[:user_id])
+        page = params[:page] || 1
+        limit = params[:limit] || 20
+        rents = Rent.where(user_id: params[:user_id]).page(page).per(limit)
         authorize rents
         render json: rents, status: :ok
       end
