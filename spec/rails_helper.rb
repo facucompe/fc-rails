@@ -17,7 +17,6 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 
   config.include Response::JSONParser, type: :controller
-
 end
 
 
