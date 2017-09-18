@@ -1,0 +1,25 @@
+h2 New book suggestion
+
+= simple_form_for @new_book_suggestion, :url => url_for(:action=>'create', :controller=>'/api/v1/book_suggestions'), :method=>'post', :remote=>true do |f|
+  =f.input :title
+  =f.input :editorial
+  =f.input :author
+  =f.input :price
+  =f.input :link
+  =f.input :year
+  =f.button :submit
+
+table
+  tr
+    th Title
+    th Author
+    th Editorial
+    th Price
+    th Link
+  - @book_suggestions.each do |book_suggestion|
+    tr
+      td = book_suggestion.title
+      td = book_suggestion.author
+      td = book_suggestion.editorial
+      td = book_suggestion.price
+      td = book_suggestion.link
