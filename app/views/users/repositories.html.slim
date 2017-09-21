@@ -1,0 +1,10 @@
+h2 Repositories
+
+table
+  tr
+    th Name
+    th Link
+    - @repositories.each do |repo|
+      tr
+        td = repo['name']
+        td = repo['url']

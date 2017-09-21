@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :book_suggestions, only: [:new]
+  get 'users/:id/repositories', to: 'users#repositories'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   api_version(module: 'api/v1', path: { value: 'api/v1' }, defaults: { format: :json })   do
     resources :users do
