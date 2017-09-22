@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def repositories
     user = User.find(params[:id])
-    github = GithubService.new
-    @repositories = github.repositories(user.github_username)
+    job = Job.create
+    GithubWorker.perform_async(user.github_username, job.id)
+    @job_id = job.id
   end
 end

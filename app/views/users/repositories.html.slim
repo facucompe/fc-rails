@@ -1,10 +1,6 @@
 h2 Repositories
 
-table
+table.repositories (data-job-id=@job_id)
   tr
     th Name
     th Link
-    - @repositories.each do |repo|
-      tr
-        td = repo['name']
-        td = repo['url']
