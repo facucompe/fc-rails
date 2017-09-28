@@ -1,0 +1,17 @@
+h1 New book rent
+ul
+  li
+    = t('mailer.title')
+    = @rent.book.title
+  li
+    = t('mailer.from')
+    = @rent.from
+  li
+    = t('mailer.to')
+    = @rent.to
+  li
+    = t('mailer.author')
+    = @rent.book.author
+  li
+    = t('mailer.publisher')
+    = @rent.book.publisher
